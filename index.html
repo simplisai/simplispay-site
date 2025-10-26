@@ -1,444 +1,1276 @@
-<!doctype html>
-<html lang="pt-BR"><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SimplisPay — Gestão Financeira Simplificada</title>
-  <!-- SEO básico -->
-  <meta name="description" content="Plataforma completa para gestão de pagamentos. Simplifique sua gestão financeira e cresça com a SimplisPay.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://simplispay-site.netlify.app/">
-  <meta name="theme-color" content="#7CCF00">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Simplifique sua gestão financeira.">
-  <meta property="og:description" content="Cresça com a SimplisPay.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://simplispay-site.netlify.app/">
-  <meta property="og:image" content="https://simplispay-site.netlify.app/simplispay2.png">
-  <meta property="og:image:alt" content="Logo da SimplisPay">
-  <meta property="og:site_name" content="SimplisPay">
-  <meta property="og:locale" content="pt_BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+    />
+    <title>SimplisPay — Gestão Financeira Simplificada</title>
+    <meta
+      name="description"
+      content="Plataforma completa para gestão de pagamentos. Simplifique sua gestão financeira e cresça com a SimplisPay."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://simplispay-site.netlify.app/" />
+    <meta name="theme-color" content="#7CCF00" />
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Simplifique sua gestão financeira.">
-  <meta name="twitter:description" content="Cresça com a SimplisPay.">
-  <meta name="twitter:image" content="https://simplispay-site.netlify.app/simplispay2.png">
-  <meta name="twitter:image:alt" content="Logo da SimplisPay">
+    <meta property="og:title" content="Simplifique sua gestão financeira." />
+    <meta property="og:description" content="Cresça com a SimplisPay." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://simplispay-site.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://simplispay-site.netlify.app/simplispay2.png"
+    />
+    <meta property="og:image:alt" content="Logo da SimplisPay" />
+    <meta property="og:site_name" content="SimplisPay" />
+    <meta property="og:locale" content="pt_BR" />
 
-  <!-- Favicon e fontes -->
-  <link rel="icon" type="image/png" href="./logo.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SimplisPay",
-    "url": "https://simplispay-site.netlify.app/",
-    "logo": "https://simplispay-site.netlify.app/simplispay2.png"
-  }
-  </script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            background: 'rgb(10, 10, 10)',
-            foreground: 'rgb(250, 250, 250)',
-            card: 'rgb(23, 23, 23)',
-            'card-foreground': 'rgb(250, 250, 250)',
-            popover: 'rgb(38, 38, 38)',
-            'popover-foreground': 'rgb(250, 250, 250)',
-            primary: 'rgb(124, 207, 0)',
-            'primary-foreground': 'rgb(23, 23, 23)',
-            secondary: 'rgb(38, 38, 38)',
-            'secondary-foreground': 'rgb(124, 207, 0)',
-            muted: 'rgb(38, 38, 38)',
-            'muted-foreground': 'rgb(161, 161, 161)',
-            accent: 'rgb(64, 64, 64)',
-            'accent-foreground': 'rgb(124, 207, 0)',
-            destructive: 'rgb(255, 100, 103)',
-            'destructive-foreground': 'rgb(250, 250, 250)',
-            border: 'rgb(40, 40, 40)',
-            input: 'rgb(52, 52, 52)',
-            ring: 'rgb(115, 115, 115)',
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./logo.png" />
+    <link rel="apple-touch-icon" href="./logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Simplifique sua gestão financeira." />
+    <meta name="twitter:description" content="Cresça com a SimplisPay." />
+    <meta name="twitter:image" content="https://simplispay-site.netlify.app/simplispay2.png" />
+    <meta name="twitter:image:alt" content="Logo da SimplisPay" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SimplisPay",
+      "url": "https://simplispay-site.netlify.app/",
+      "logo": "https://simplispay-site.netlify.app/simplispay2.png"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-40px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(40px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      @keyframes blurIn {
+        from { opacity: 0; filter: blur(12px); transform: translateY(15px) scale(1.01); }
+        to { opacity: 1; filter: blur(0px); transform: translateY(0) scale(1); }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(1deg); }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(124, 207, 0, 0.3); }
+        50% { box-shadow: 0 0 30px rgba(124, 207, 0, 0.5); }
+      }
+      @keyframes flow {
+        0% { transform: translateX(-100%) translateY(-50%); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateX(100%) translateY(-50%); opacity: 0; }
+      }
+      
+      .animate-fade-in { animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-slide-up { animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-slide-in-left { animation: slideInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-slide-in-right { animation: slideInRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-scale-in { animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-blur-in { animation: blurIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-float { animation: float 6s ease-in-out infinite; }
+      .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+      
+      .scroll-element {
+        opacity: 0;
+      }
+      
+      .flow-line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        left: 0;
+        background: linear-gradient(90deg, transparent, #7CCF00, transparent);
+        animation: flow 2s ease-in-out infinite;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#7CCF00',
+            }
           }
         }
       }
-    }
-  </script>
-</head>
-<body class="antialiased text-foreground bg-background overflow-x-hidden" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;">
-  
-  <!-- Header -->
-  <header class="w-full px-3 sm:px-4 md:px-6 pt-4 sm:pt-6 sticky top-2 sm:top-4 z-50 opacity-0 translate-y-4 animate-[fade-in-down_0.6s_ease-out_0.2s_forwards]">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex bg-card/80 border border-border rounded-full py-2 px-3 sm:px-4 backdrop-blur-md items-center justify-between min-h-[48px] sm:min-h-[52px] shadow-xl">
-        <div class="flex items-center gap-2 sm:gap-3">
-          <div class="flex items-center gap-2">
-            <img src="./simplispay2.png" alt="SimplisPay" class="h-6 sm:h-8 w-auto">
-          </div>
-        </div>
-        <div class="flex items-center gap-3 sm:gap-6">
-          <nav class="hidden md:flex items-center gap-6">
-            <a href="#" class="text-sm font-medium text-muted-foreground hover:text-primary tracking-tight transition-colors">Suporte</a>
-          </nav>
-          <a href="https://portal.simplispay.com.br/" class="inline-flex items-center gap-1.5 sm:gap-2 text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-200 hover:scale-105 text-xs sm:text-sm font-medium tracking-tight rounded-full py-1.5 px-3 sm:py-2 sm:px-4">
-            <span class="hidden xs:inline">Acessar Portal</span>
-            <span class="xs:hidden">Portal</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-3.5 h-3.5 sm:w-4 sm:h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    </script>
+  </head>
+
+  <body
+    class="antialiased bg-black text-white selection:bg-primary selection:text-black font-[Inter] overflow-x-hidden"
+  >
+    <!-- Background gradient -->
+    <div class="fixed inset-0 -z-10 bg-black">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-black via-zinc-900/20 to-black"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"
+        style="transform: translateZ(0)"
+      ></div>
+      <div
+        class="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full opacity-20 animate-float"
+      ></div>
+      <div
+        class="absolute top-40 right-20 w-1 h-1 bg-primary rounded-full opacity-30 animate-float"
+        style="animation-delay: 2s"
+      ></div>
+      <div
+        class="absolute top-80 left-1/4 w-1.5 h-1.5 bg-primary rounded-full opacity-25 animate-float"
+        style="animation-delay: 4s"
+      ></div>
+    </div>
+
+    <!-- Navigation -->
+    <header
+      class="relative border-b border-zinc-800 scroll-element"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8"
+      >
+        <a
+          href="#"
+          class="group inline-flex items-center gap-3"
+          aria-label="SimplisPay"
+        >
+          <img src="./simplispay2.png" alt="SimplisPay" class="h-6 sm:h-8 w-auto">
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a
+            href="#funcionalidades"
+            class="text-sm text-zinc-400 hover:text-white transition-colors"
+          >
+            Funcionalidades
+          </a>
+          <a
+            href="#solucoes"
+            class="text-sm text-zinc-400 hover:text-white transition-colors"
+          >
+            Soluções
+          </a>
+          <a
+            href="#"
+            class="text-sm text-zinc-400 hover:text-white transition-colors"
+          >
+            Suporte
           </a>
         </div>
-      </div>
-    </div>
-  </header>
+        <div class="hidden items-center gap-3 md:flex">
+          <a
+            href="https://portal.simplispay.com.br/"
+            class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-black transition hover:bg-primary/90"
+          >
+            Acessar Portal
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-4 h-4"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <button
+          class="md:hidden inline-flex items-center gap-2 rounded-md border border-zinc-800 px-3 py-2 text-zinc-400 hover:text-white hover:border-zinc-700 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4"
+          >
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+            <path d="M4 6h16"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="w-full px-3 sm:px-4 md:px-6 mt-6 sm:mt-8 mb-6 sm:mb-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="relative overflow-hidden bg-card border border-border rounded-3xl sm:rounded-[40px] backdrop-blur opacity-0 translate-y-8 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]">
-        
-        <div class="relative p-4 sm:p-6 md:p-8">
-          <div class="text-center max-w-4xl mx-auto">
-            <div class="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-medium text-primary bg-primary/10 border border-primary/20 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 mb-4 sm:mb-6 opacity-0 animate-[fade-in_0.6s_ease-out_0.8s_forwards]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" class="lucide lucide-shield-check w-3 h-3 sm:w-3.5 sm:h-3.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
-              <span>Seguro • Simples • Confiável</span>
+    <!-- Hero -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-6 pt-20 pb-16 lg:px-8 lg:pt-32">
+        <div class="text-center">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/50 px-3 py-1 text-xs text-zinc-300 backdrop-blur scroll-element"
+          >
+            <span
+              class="inline-flex h-1.5 w-1.5 rounded-full bg-primary"
+            ></span>
+            Seguro • Simples • Confiável
+          </div>
+
+          <h1
+            class="mt-8 text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl scroll-element"
+          >
+            Você no comando
+            <br />
+            <span
+              class="bg-gradient-to-r from-zinc-300 via-white to-zinc-300 bg-clip-text text-transparent"
+            >
+              das suas finanças
+            </span>
+          </h1>
+
+          <p
+            class="mx-auto mt-6 max-w-2xl text-lg text-zinc-400 scroll-element"
+          >
+            Uma plataforma completa para gestão de pagamentos, feita para
+            simplificar o dia a dia do seu negócio. Simples, segura e poderosa.
+          </p>
+
+          <div
+            class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center scroll-element"
+          >
+            <a
+              href="https://portal.simplispay.com.br/app/cadastrar/estabelecimento"
+              class="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-medium text-black transition hover:bg-primary/90 hover:scale-105 transform"
+            >
+              Começar gratuitamente
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4 h-4"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 rounded-md border border-zinc-800 px-6 py-3 text-sm font-medium text-white transition hover:border-zinc-700 hover:bg-zinc-900 hover:scale-105 transform"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1.003 3.458l-12 7A2 2 0 0 1 5 19z"
+                ></path>
+              </svg>
+              Ver demonstração
+            </a>
+          </div>
+
+          <div
+            class="mt-12 flex items-center justify-center gap-8 scroll-element"
+          >
+            <div class="flex -space-x-2">
+              <img
+                class="h-8 w-8 rounded-full ring-2 ring-black object-cover hover:scale-110 transition-transform"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256"
+                alt="User 1"
+              />
+              <img
+                class="h-8 w-8 rounded-full ring-2 ring-black object-cover hover:scale-110 transition-transform"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256"
+                alt="User 2"
+              />
+              <img
+                class="h-8 w-8 rounded-full ring-2 ring-black object-cover hover:scale-110 transition-transform"
+                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256"
+                alt="User 3"
+              />
             </div>
-            
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground tracking-tight leading-[1.1] sm:leading-[0.95] mb-4 sm:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards] px-2 sm:px-0">
-              Você no comando das suas finanças
-            </h1>
-            
-            <h2 class="text-base sm:text-lg md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-12 opacity-0 animate-[fade-in-up_0.8s_ease-out_1.2s_forwards] px-2 sm:px-4">
-              Uma plataforma completa para gestão de pagamentos, feita para simplificar o dia a dia do seu negócio. Simples, segura e poderosa.
+            <p class="text-sm text-zinc-500">
+              Confiado por milhares de empresas
+            </p>
+          </div>
+        </div>
+
+        <!-- Dashboard mockup -->
+        <div
+          class="mt-16 relative scroll-element"
+        >
+          <div
+            class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 blur-2xl"
+          ></div>
+          <div
+            class="relative rounded-xl border border-zinc-800 bg-zinc-950 p-4 shadow-2xl hover:shadow-3xl transition-shadow duration-700"
+          >
+            <div
+              class="flex items-center justify-between border-b border-zinc-800 pb-4"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="h-8 w-8 rounded-md bg-primary text-black inline-flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4"
+                  >
+                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                    <line x1="2" x2="22" y1="10" y2="10"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white">
+                    Pagamento #PAY-1049
+                  </div>
+                  <div class="text-xs text-zinc-500">Processado hoje</div>
+                </div>
+              </div>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-1 text-xs font-medium text-primary border border-primary/20"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-3 h-3"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                Aprovado
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-3">
+              <div class="lg:col-span-2">
+                <div
+                  class="rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-900/70 transition-colors duration-500"
+                >
+                  <div
+                    class="flex items-center justify-between border-b border-zinc-800 px-4 py-3"
+                  >
+                    <span class="text-sm font-medium text-white">Detalhes</span>
+                    <span class="text-xs text-zinc-500">PIX</span>
+                  </div>
+                  <div class="p-4">
+                    <div class="text-sm font-medium text-white">
+                      Cliente Premium
+                    </div>
+                    <div class="text-xs text-zinc-500">
+                      cliente@exemplo.com.br
+                    </div>
+                    <div
+                      class="mt-4 rounded-md bg-black/50 p-4 border border-zinc-800 hover:border-zinc-700 transition-colors duration-300"
+                    >
+                      <div class="flex items-center justify-between text-sm">
+                        <span class="text-zinc-300">Assinatura Mensal</span>
+                        <span class="font-mono text-white">R$ 299,00</span>
+                      </div>
+                      <div
+                        class="mt-2 flex items-center justify-between text-sm"
+                      >
+                        <span class="text-zinc-300">Taxa de processamento</span>
+                        <span class="font-mono text-white">R$ 8,97</span>
+                      </div>
+                      <div class="mt-4 border-t border-zinc-800 pt-3">
+                        <div
+                          class="mt-3 flex items-center justify-between border-t border-zinc-800 pt-2 text-sm"
+                        >
+                          <span class="font-medium text-white">
+                            Total recebido
+                          </span>
+                          <span class="font-mono font-medium text-primary">
+                            R$ 290,03
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col rounded-lg border border-zinc-800 bg-zinc-900/50 p-4 hover:bg-zinc-900/70 transition-all duration-500"
+              >
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-medium text-white">
+                      Recebimentos
+                    </div>
+                    <div class="text-xs text-zinc-500">Últimos 30 dias</div>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-1 rounded-md bg-primary/10 px-2 py-1 text-xs font-mono text-primary border border-primary/20"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-3 h-3"
+                    >
+                      <path d="M16 7h6v6"></path>
+                      <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                    </svg>
+                    +24%
+                  </div>
+                </div>
+                <div class="mt-4 flex-1">
+                  <div
+                    class="rounded-md bg-black/50 border border-zinc-800 p-2 hover:border-zinc-700 transition-colors duration-300"
+                  >
+                    <div
+                      class="relative h-32 flex items-end justify-between gap-1"
+                    >
+                      <div
+                        class="w-full bg-zinc-700 rounded-t"
+                        style="height: 45%"
+                      ></div>
+                      <div
+                        class="w-full bg-zinc-700 rounded-t"
+                        style="height: 60%"
+                      ></div>
+                      <div
+                        class="w-full bg-zinc-700 rounded-t"
+                        style="height: 55%"
+                      ></div>
+                      <div
+                        class="w-full bg-zinc-700 rounded-t"
+                        style="height: 75%"
+                      ></div>
+                      <div
+                        class="w-full bg-primary rounded-t"
+                        style="height: 90%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="mt-3 flex items-center justify-between text-xs">
+                    <span class="text-zinc-400">Este mês</span>
+                    <span class="font-mono text-white">R$ 18.240</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-4 flex items-center justify-between rounded-lg border border-zinc-800 bg-zinc-900/50 px-4 py-3 hover:bg-zinc-900/70 hover:border-zinc-700 transition-all duration-300"
+            >
+              <div class="flex items-center gap-2 text-sm text-zinc-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                  ></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                Pagamentos seguros com recibo instantâneo
+              </div>
+              <button
+                class="inline-flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-black transition hover:bg-primary/90 hover:scale-105 transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M14.536 21.686a.5.5 0 0 0.937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                  ></path>
+                  <path d="m21.854 2.147-10.94 10.939"></path>
+                </svg>
+                Gerar link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="funcionalidades" class="relative border-t border-zinc-800">
+      <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div
+          class="mx-auto max-w-2xl text-center scroll-element"
+        >
+          <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            Tudo que você precisa para crescer
+          </h2>
+          <p class="mt-4 text-lg text-zinc-400">
+            Da primeira cobrança ao último pagamento—simples, seguro e
+            profissional.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="group rounded-xl border border-zinc-800 bg-zinc-950/50 p-8 transition-all duration-500 hover:border-zinc-700 hover:bg-zinc-900/50 hover:scale-105 hover:shadow-xl scroll-element"
+          >
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-black group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                <line x1="2" x2="22" y1="10" y2="10"></line>
+              </svg>
+            </div>
+            <h3
+              class="mt-4 text-lg font-medium text-white group-hover:text-zinc-100 transition-colors"
+            >
+              PIX instantâneo
+            </h3>
+            <p
+              class="mt-2 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors"
+            >
+              Receba em segundos com PIX. Simples, rápido e sem complicação para
+              você e seus clientes.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-xl border border-zinc-800 bg-zinc-950/50 p-8 transition-all duration-500 hover:border-zinc-700 hover:bg-zinc-900/50 hover:scale-105 hover:shadow-xl scroll-element"
+          >
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-black group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"
+                ></path>
+                <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+                <path d="M12 17.5v-11"></path>
+              </svg>
+            </div>
+            <h3
+              class="mt-4 text-lg font-medium text-white group-hover:text-zinc-100 transition-colors"
+            >
+              Boleto personalizado
+            </h3>
+            <p
+              class="mt-2 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors"
+            >
+              Customize boletos com sua marca e cobre de forma profissional e
+              confiável.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-xl border border-zinc-800 bg-zinc-950/50 p-8 transition-all duration-500 hover:border-zinc-700 hover:bg-zinc-900/50 hover:scale-105 hover:shadow-xl scroll-element"
+          >
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-black group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path
+                  d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"
+                ></path>
+                <path d="m14 7 3 3"></path>
+                <path d="M5 6v4"></path>
+                <path d="M19 14v4"></path>
+                <path d="M10 2v2"></path>
+                <path d="M7 8H3"></path>
+                <path d="M21 16h-4"></path>
+                <path d="M11 3H9"></path>
+              </svg>
+            </div>
+            <h3
+              class="mt-4 text-lg font-medium text-white group-hover:text-zinc-100 transition-colors"
+            >
+              Link de pagamento
+            </h3>
+            <p
+              class="mt-2 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors"
+            >
+              Envie cobranças em segundos. Sem máquina, sem complicação. Receba
+              de forma ágil.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-xl border border-zinc-800 bg-zinc-950/50 p-8 transition-all duration-500 hover:border-zinc-700 hover:bg-zinc-900/50 hover:scale-105 hover:shadow-xl scroll-element"
+          >
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-black group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M16 7h6v6"></path>
+                <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+              </svg>
+            </div>
+            <h3
+              class="mt-4 text-lg font-medium text-white group-hover:text-zinc-100 transition-colors"
+            >
+              Antecipação
+            </h3>
+            <p
+              class="mt-2 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors"
+            >
+              Antecipe recebíveis e mantenha o fluxo de caixa sempre em dia.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-xl border border-zinc-800 bg-zinc-950/50 p-8 transition-all duration-500 hover:border-zinc-700 hover:bg-zinc-900/50 hover:scale-105 hover:shadow-xl scroll-element"
+          >
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-black group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M12 6v6l4 2"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3
+              class="mt-4 text-lg font-medium text-white group-hover:text-zinc-100 transition-colors"
+            >
+              Cobrança recorrente
+            </h3>
+            <p
+              class="mt-2 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors"
+            >
+              Automatize assinaturas e receba de forma programada.
+              Previsibilidade garantida.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-xl border border-zinc-800 bg-zinc-950/50 p-8 transition-all duration-500 hover:border-zinc-700 hover:bg-zinc-900/50 hover:scale-105 hover:shadow-xl scroll-element"
+          >
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-black group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              class="mt-4 text-lg font-medium text-white group-hover:text-zinc-100 transition-colors"
+            >
+              Segurança integrada
+            </h3>
+            <p
+              class="mt-2 text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors"
+            >
+              Criptografia bancária, backups regulares e controles de acesso
+              avançados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Split Payment Section -->
+    <section id="solucoes" class="relative border-t border-zinc-800">
+      <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+          <div
+            class="lg:col-span-5 scroll-element"
+          >
+            <h2
+              class="text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            >
+              Split de pagamento automático
             </h2>
-
-            <!-- Quick stats -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12 opacity-0 animate-[fade-in-up_0.8s_ease-out_1.4s_forwards]">
-              <div class="text-center">
-                <div class="text-xl sm:text-2xl font-bold text-primary mb-0.5 sm:mb-1">PIX</div>
-                <p class="text-[10px] sm:text-xs text-muted-foreground">Instantâneo</p>
-              </div>
-              <div class="text-center">
-                <div class="text-xl sm:text-2xl font-bold text-foreground mb-0.5 sm:mb-1">Cartão</div>
-                <p class="text-[10px] sm:text-xs text-muted-foreground">Débito/Crédito</p>
-              </div>
-              <div class="text-center">
-                <div class="text-xl sm:text-2xl font-bold text-foreground mb-0.5 sm:mb-1">Boleto</div>
-                <p class="text-[10px] sm:text-xs text-muted-foreground">Personalizado</p>
-              </div>
-              <div class="text-center">
-                <div class="text-xl sm:text-2xl font-bold text-foreground mb-0.5 sm:mb-1">TED</div>
-                <p class="text-[10px] sm:text-xs text-muted-foreground">Seguro</p>
-              </div>
+            <p class="mt-4 text-lg text-zinc-400">
+              Divida pagamentos automaticamente entre múltiplos beneficiários.
+              Simples, transparente e em tempo real.
+            </p>
+            <ul class="mt-8 space-y-3 text-sm text-zinc-300">
+              <li
+                class="flex items-start gap-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+                >
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                Divisão automática por percentual ou valor fixo
+              </li>
+              <li
+                class="flex items-start gap-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+                >
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                Repasse instantâneo para cada beneficiário
+              </li>
+              <li
+                class="flex items-start gap-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+                >
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                Compatível com PIX, Link e Boleto
+              </li>
+            </ul>
+            <div
+              class="mt-8 flex items-center gap-3"
+            >
+              <a
+                href="https://portal.simplispay.com.br/"
+                class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-black transition hover:bg-primary/90 hover:scale-105 transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0.696 10.75 10.75 0 0 1-19.876 0"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Acessar portal
+              </a>
             </div>
-
-            <!-- CTA buttons -->
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 opacity-0 animate-[fade-in-up_0.8s_ease-out_1.6s_forwards] px-4">
-              <button type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl px-6 sm:px-8 py-2.5 sm:py-3 text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-200 hover:scale-105">
-                <span>Criar conta grátis</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </button>
-              <button type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl px-6 sm:px-8 py-2.5 sm:py-3 text-sm font-medium text-foreground bg-accent/20 border border-border hover:bg-accent/30 transition-all duration-200 hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-4 h-4"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
-                <span>Ver demonstração</span>
-              </button>
-            </div>
-
-            <!-- Demo area -->
-            <div class="relative rounded-xl sm:rounded-2xl overflow-hidden border border-border bg-secondary/20 p-4 sm:p-6 md:p-8 min-h-[300px] sm:min-h-[400px] flex items-center justify-center opacity-0 animate-[fade-in-up_0.8s_ease-out_1.8s_forwards]">
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl">
-                <div class="text-center opacity-0 animate-[fade-in-up_0.6s_ease-out_2.2s_forwards]">
-                  <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" class="lucide lucide-trending-up w-6 h-6 sm:w-8 sm:h-8 text-accent-foreground"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
+          </div>
+          <div
+            class="lg:col-span-7 scroll-element"
+          >
+            <div
+              class="relative rounded-xl border border-zinc-800 bg-zinc-950 p-6 hover:border-zinc-700 hover:shadow-2xl transition-all duration-700"
+            >
+              <!-- Payment Received Card -->
+              <div class="rounded-lg border border-zinc-800 bg-zinc-900/50 p-5 mb-6">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <div class="text-sm font-medium text-white">Venda realizada</div>
+                    <div class="text-xs text-zinc-500 mt-0.5">ID: #SPLIT-8472</div>
                   </div>
-                  <h3 class="text-base sm:text-lg font-semibold text-foreground mb-1.5 sm:mb-2">Crescimento</h3>
-                  <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Aumente sua receita com ferramentas inteligentes</p>
+                  <span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary border border-primary/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                    Processado
+                  </span>
                 </div>
-                <div class="text-center opacity-0 animate-[fade-in-up_0.6s_ease-out_2.4s_forwards]">
-                  <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" class="lucide lucide-shield w-6 h-6 sm:w-8 sm:h-8 text-accent-foreground"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                
+                <div class="rounded-md bg-black/50 border border-zinc-800 p-4 hover:border-primary/20 transition-all duration-300">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-zinc-500">Valor total recebido</span>
+                    <div class="flex items-center gap-2">
+                      <div class="px-2 py-0.5 rounded-md bg-primary/10 border border-primary/20">
+                        <span class="text-xs text-primary font-medium">PIX</span>
+                      </div>
+                    </div>
                   </div>
-                  <h3 class="text-base sm:text-lg font-semibold text-foreground mb-1.5 sm:mb-2">Segurança</h3>
-                  <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Proteção máxima para seus dados e transações</p>
+                  <div class="text-3xl font-mono font-semibold text-primary">R$ 1.500,00</div>
+                  <div class="text-xs text-zinc-500 mt-1">Recebido às 14:32</div>
                 </div>
-                <div class="text-center opacity-0 animate-[fade-in-up_0.6s_ease-out_2.6s_forwards] sm:col-span-2 lg:col-span-1">
-                  <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" class="lucide lucide-zap w-6 h-6 sm:w-8 sm:h-8 text-primary"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+              </div>
+
+              <!-- Split Visualization -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="text-sm font-medium text-white">Divisão automática</div>
+                  <div class="text-xs text-zinc-500">3 beneficiários</div>
+                </div>
+
+                <!-- Recipient 1 -->
+                <div class="relative">
+                  <div class="flex items-center gap-4 rounded-lg bg-zinc-900/50 border border-zinc-800 p-4 hover:bg-zinc-900/70 hover:border-primary/30 transition-all duration-300 group">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-sm font-medium text-white">João Silva</div>
+                      <div class="text-xs text-zinc-500 mt-0.5">Vendedor Principal</div>
+                      <div class="mt-2 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full" style="width: 70%; animation: fillBar 1.5s ease-out"></div>
+                      </div>
+                    </div>
+                    <div class="text-right flex-shrink-0">
+                      <div class="text-xs text-zinc-500 mb-1">70%</div>
+                      <div class="text-base font-mono font-semibold text-white">R$ 1.050,00</div>
+                    </div>
                   </div>
-                  <h3 class="text-base sm:text-lg font-semibold text-foreground mb-1.5 sm:mb-2">Rapidez</h3>
-                  <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Processamento instantâneo de pagamentos</p>
+                  <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary">
+                      <path d="m7 7 10 10"></path>
+                      <path d="M17 7v10"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Recipient 2 -->
+                <div class="relative pt-2">
+                  <div class="flex items-center gap-4 rounded-lg bg-zinc-900/50 border border-zinc-800 p-4 hover:bg-zinc-900/70 hover:border-primary/30 transition-all duration-300 group">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+                        <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
+                        <path d="M12 3v6"></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-sm font-medium text-white">Marketplace</div>
+                      <div class="text-xs text-zinc-500 mt-0.5">Taxa de Plataforma</div>
+                      <div class="mt-2 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-primary/80 to-primary/60 rounded-full" style="width: 20%; animation: fillBar 1.5s ease-out 0.2s backwards"></div>
+                      </div>
+                    </div>
+                    <div class="text-right flex-shrink-0">
+                      <div class="text-xs text-zinc-500 mb-1">20%</div>
+                      <div class="text-base font-mono font-semibold text-white">R$ 300,00</div>
+                    </div>
+                  </div>
+                  <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-primary">
+                      <path d="m7 7 10 10"></path>
+                      <path d="M17 7v10"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Recipient 3 -->
+                <div class="relative pt-2">
+                  <div class="flex items-center gap-4 rounded-lg bg-zinc-900/50 border border-zinc-800 p-4 hover:bg-zinc-900/70 hover:border-primary/30 transition-all duration-300 group">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-sm font-medium text-white">Maria Costa</div>
+                      <div class="text-xs text-zinc-500 mt-0.5">Afiliado</div>
+                      <div class="mt-2 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-primary/60 to-primary/40 rounded-full" style="width: 10%; animation: fillBar 1.5s ease-out 0.4s backwards"></div>
+                      </div>
+                    </div>
+                    <div class="text-right flex-shrink-0">
+                      <div class="text-xs text-zinc-500 mb-1">10%</div>
+                      <div class="text-base font-mono font-semibold text-white">R$ 150,00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Methods -->
+              <div class="mt-6 rounded-lg border border-zinc-800 bg-zinc-900/50 p-4">
+                <div class="text-sm font-medium text-white mb-3">Métodos compatíveis</div>
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="rounded-md bg-black/50 border border-zinc-800 p-3 text-center hover:border-primary/30 hover:bg-black/70 transition-all duration-300 group cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                      <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                      <line x1="2" x2="22" y1="10" y2="10"></line>
+                    </svg>
+                    <div class="text-xs text-zinc-300 font-medium">PIX</div>
+                  </div>
+                  <div class="rounded-md bg-black/50 border border-zinc-800 p-3 text-center hover:border-primary/30 hover:bg-black/70 transition-all duration-300 group cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                      <path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path>
+                      <path d="m14 7 3 3"></path>
+                      <path d="M5 6v4"></path>
+                      <path d="M19 14v4"></path>
+                      <path d="M10 2v2"></path>
+                      <path d="M7 8H3"></path>
+                      <path d="M21 16h-4"></path>
+                      <path d="M11 3H9"></path>
+                    </svg>
+                    <div class="text-xs text-zinc-300 font-medium">Link</div>
+                  </div>
+                  <div class="rounded-md bg-black/50 border border-zinc-800 p-3 text-center hover:border-primary/30 hover:bg-black/70 transition-all duration-300 group cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path>
+                      <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+                      <path d="M12 17.5v-11"></path>
+                    </svg>
+                    <div class="text-xs text-zinc-300 font-medium">Boleto</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features Section -->
-  <section class="w-full px-3 sm:px-4 md:px-6 mt-8 sm:mt-10 mb-6 sm:mb-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="relative overflow-hidden bg-card border border-border rounded-3xl sm:rounded-[40px] backdrop-blur opacity-0 translate-y-8 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]">
+    <!-- CTA -->
+    <section class="relative border-t border-zinc-800">
+      <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 p-8 lg:p-16 scroll-element hover:border-zinc-700 hover:shadow-2xl transition-all duration-700"
+        >
+          <div
+            class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-zinc-900/20 to-black"
+          ></div>
+          <div class="flex flex-col items-center text-center">
+            <h3
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Simplifique sua gestão financeira
+            </h3>
+            <p class="mt-4 text-lg text-zinc-400">
+              Cresça com a SimplisPay. Comece gratuitamente hoje.
+            </p>
+            <div class="mt-8 flex items-center gap-4">
+              <a
+                href="https://portal.simplispay.com.br/app/cadastrar/estabelecimento"
+                class="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-medium text-black transition hover:bg-primary/90 hover:scale-105 transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1.86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1.78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                  ></path>
+                </svg>
+                Começar agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="relative border-t border-zinc-800 scroll-element"
+    >
+      <div class="max-w-7xl lg:px-8 mr-auto ml-auto pt-12 pr-6 pb-3 pl-6">
+        <div
+          class="flex flex-col justify-between gap-8 md:flex-row md:items-center"
+        >
+          <div class="flex items-center gap-3">
+            <img src="./simplispay2.png" alt="SimplisPay" class="h-6 sm:h-8 w-auto">
+          </div>
+          <div class="flex items-center gap-8 text-sm text-zinc-500">
+            <a href="#" class="hover:text-white transition-colors duration-300">
+              Privacidade
+            </a>
+            <a href="#" class="hover:text-white transition-colors duration-300">
+              Termos
+            </a>
+            <a href="#" class="hover:text-white transition-colors duration-300">
+              Suporte
+            </a>
+            <a href="#" class="hover:text-white transition-colors duration-300">
+              Status
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-8 flex items-center justify-between border-t border-zinc-800 pt-8"
+        >
+          <p class="text-xs text-zinc-500">
+            © 2024 SimplisPay. Todos os direitos reservados.
+          </p>
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-zinc-800 text-zinc-500 hover:text-white hover:border-zinc-700 hover:scale-110 transition-all duration-300"
+              aria-label="Twitter"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-zinc-800 text-zinc-500 hover:text-white hover:border-zinc-700 hover:scale-110 transition-all duration-300"
+              aria-label="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-zinc-800 text-zinc-500 hover:text-white hover:border-zinc-700 hover:scale-110 transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4 h-4"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+
+      // Add fillBar animation
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes fillBar {
+          from { width: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Intersection Observer for scroll animations
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'none';
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const scrollElements = document.querySelectorAll('.scroll-element');
+        scrollElements.forEach((el) => {
+          scrollObserver.observe(el);
+        });
         
-        <div class="relative p-4 sm:p-6 md:p-8">
-          <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl text-foreground tracking-tight font-semibold mb-3 sm:mb-4 opacity-0 animate-[fade-in-up_0.6s_ease-out_1s_forwards] px-2">Funcionalidades completas</h2>
-            <p class="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto opacity-0 animate-[fade-in-up_0.6s_ease-out_1.2s_forwards] px-4">Tudo que você precisa para gerenciar seus pagamentos de forma profissional</p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <!-- Boleto -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_1.4s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-primary bg-primary/10 border border-primary/20 rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                PERSONALIZAÇÃO
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Boleto</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Personalize seus boletos com a identidade do seu negócio e cobre seus clientes de forma profissional e confiável.</p>
-            </div>
-
-            <!-- Link de Pagamento -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_1.6s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-primary bg-primary/10 border border-primary/20 rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                AGILIDADE PARA RECEBER
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="link" class="lucide lucide-link w-5 h-5 sm:w-6 sm:h-6 text-primary"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Link de pagamento</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Envie pagamentos para seus clientes em segundos. Sem máquina de cartão, sem complicação. Receba de forma simples e rápida.</p>
-            </div>
-
-            <!-- Antecipação -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_1.8s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-foreground bg-accent/20 border border-border rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                CONTROLE DE FLUXO DE CAIXA
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" class="lucide lucide-trending-up w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Antecipação de recebíveis</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Não espere o cliente pagar para ter seu dinheiro em mãos. Antecipe suas vendas e mantenha o fluxo de caixa sempre em dia.</p>
-            </div>
-
-            <!-- Cobrança Recorrente -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_2s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-foreground bg-accent/20 border border-border rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                PLANOS DE ASSINATURA
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="repeat" class="lucide lucide-repeat w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><path d="m17 2 4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="m7 22-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Cobrança recorrente</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Automatize planos e assinaturas para receber de forma segura e programada todos os meses. Mais previsibilidade para o seu negócio.</p>
-            </div>
-
-            <!-- Dashboard -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_2.2s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-foreground bg-accent/20 border border-border rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                GESTÃO COMPLETA
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3" class="lucide lucide-bar-chart-3 w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Dashboard</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Um painel completo para gerenciar cada detalhe financeiro: recebíveis, relatórios, fluxo de caixa e pagamentos. Tudo em um só lugar.</p>
-            </div>
-
-            <!-- Split de Pagamento -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_2.4s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-foreground bg-accent/20 border border-border rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                CONTROLE DE REPASSES
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="git-branch" class="lucide lucide-git-branch w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Split de pagamento</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Automatize repasses e comissões para parceiros e colaboradores em uma única transação. Prático, transparente e sem dor de cabeça.</p>
-            </div>
-
-            <!-- E-commerce -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_2.6s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-foreground bg-accent/20 border border-border rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                VENDA ONLINE
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-cart" class="lucide lucide-shopping-cart w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">E-commerce</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Conecte seu e-commerce facilmente às APIs da SimplisPay. Tenha suporte técnico especializado e realize vendas online com mais segurança.</p>
-            </div>
-
-            <!-- Transferências -->
-            <div class="bg-accent/10 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-accent/20 transition-all duration-300 opacity-0 animate-[fade-in-up_0.6s_ease-out_2.8s_forwards] hover:scale-105">
-              <div class="inline-flex items-center text-[10px] sm:text-xs font-medium text-foreground bg-accent/20 border border-border rounded-full px-2 sm:px-3 py-0.5 sm:py-1 mb-3 sm:mb-4">
-                SEGURANÇA NAS TRANSAÇÕES
-              </div>
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
-              </div>
-              <h3 class="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-tight">Transferências rápidas</h3>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed">Agilidade nas transações digitais e bancárias, com total segurança para o seu dinheiro e de seus clientes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why SimplisPay Section -->
-  <section class="w-full px-3 sm:px-4 md:px-6 mt-8 sm:mt-10 mb-6 sm:mb-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="relative overflow-hidden bg-card border border-border rounded-3xl sm:rounded-[40px] backdrop-blur opacity-0 translate-y-8 animate-[fade-in-up_0.8s_ease-out_0.8s_forwards]">
-        
-        <div class="relative p-4 sm:p-6 md:p-8">
-          <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl text-foreground tracking-tight font-semibold mb-4 sm:mb-6 opacity-0 animate-[fade-in-up_0.6s_ease-out_1.2s_forwards] px-2">Por que SimplisPay?</h2>
-            
-            <div class="max-w-4xl mx-auto space-y-4 sm:space-y-6">
-              <div class="flex items-start gap-3 sm:gap-4 text-left opacity-0 animate-[fade-in-up_0.6s_ease-out_1.4s_forwards]">
-                <div class="w-5 h-5 sm:w-6 sm:h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-3 h-3 sm:w-4 sm:h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg>
-                </div>
-                <p class="text-base sm:text-lg text-foreground leading-relaxed">Tecnologia simples que resolve a parte mais complexa do financeiro</p>
-              </div>
-              
-              <div class="flex items-start gap-3 sm:gap-4 text-left opacity-0 animate-[fade-in-up_0.6s_ease-out_1.6s_forwards]">
-                <div class="w-5 h-5 sm:w-6 sm:h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-3 h-3 sm:w-4 sm:h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg>
-                </div>
-                <p class="text-base sm:text-lg text-foreground leading-relaxed">Suporte humano, rápido e próximo do seu negócio</p>
-              </div>
-              
-              <div class="flex items-start gap-3 sm:gap-4 text-left opacity-0 animate-[fade-in-up_0.6s_ease-out_1.8s_forwards]">
-                <div class="w-5 h-5 sm:w-6 sm:h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-3 h-3 sm:w-4 sm:h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg>
-                </div>
-                <p class="text-base sm:text-lg text-foreground leading-relaxed">Experiência desenhada para economizar tempo e aumentar sua confiança</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Final CTA -->
-          <div class="text-center bg-primary/5 border border-primary/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 opacity-0 animate-[fade-in-up_0.6s_ease-out_2s_forwards]">
-            <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground tracking-tight mb-3 sm:mb-4 px-2">Simplifique sua gestão financeira.</h3>
-            <p class="text-sm sm:text-base text-muted-foreground mb-5 sm:mb-6 max-w-2xl mx-auto px-2">Cresça com a SimplisPay.</p>
-            <button type="button" onclick="window.location.href='https://portal.simplispay.com.br/app/cadastrar/estabelecimento'" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl px-6 sm:px-8 py-2.5 sm:py-3 text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-200 hover:scale-105">
-              <span>Começar gratuitamente</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="w-full px-3 sm:px-4 md:px-6 mt-12 sm:mt-16 mb-6 sm:mb-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="relative overflow-hidden bg-card border border-border rounded-3xl sm:rounded-[40px] backdrop-blur opacity-0 translate-y-8 animate-[fade-in-up_0.8s_ease-out_1s_forwards]">
-        
-        <div class="relative p-4 sm:p-6 md:p-8">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div class="lg:col-span-2">
-              <div class="flex items-center gap-2 mb-3 sm:mb-4">
-                <img src="./simplispay2.png" alt="SimplisPay" class="h-6 sm:h-8 w-auto">
-              </div>
-              <p class="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-md mb-4 sm:mb-6">
-                Simplificamos a gestão financeira para que você possa focar no que realmente importa: fazer seu negócio crescer.
-              </p>
-              <div class="flex items-center gap-3 sm:gap-4">
-                <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-4 h-4 sm:w-5 sm:h-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                </a>
-                <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin" class="lucide lucide-linkedin w-4 h-4 sm:w-5 sm:h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram w-4 h-4 sm:w-5 sm:h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="text-xs sm:text-sm font-semibold text-foreground mb-3 sm:mb-4">Produtos</h3>
-              <ul class="space-y-2 sm:space-y-3">
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Pagamentos</a></li>
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Cobrança</a></li>
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Antecipação</a></li>
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">API</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="text-xs sm:text-sm font-semibold text-foreground mb-3 sm:mb-4">Suporte</h3>
-              <ul class="space-y-2 sm:space-y-3">
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Central de Ajuda</a></li>
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Documentação</a></li>
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Status</a></li>
-                <li><a href="#" class="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="border-t border-border mt-6 sm:mt-8 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
-            <p class="text-[10px] sm:text-xs text-muted-foreground text-center sm:text-left">© 2024 SimplisPay. Todos os direitos reservados.</p>
-            <div class="flex items-center gap-4 sm:gap-6">
-              <a href="#" class="text-[10px] sm:text-xs text-muted-foreground hover:text-primary transition-colors">Privacidade</a>
-              <a href="#" class="text-[10px] sm:text-xs text-muted-foreground hover:text-primary transition-colors">Termos</a>
-              <a href="#" class="text-[10px] sm:text-xs text-muted-foreground hover:text-primary transition-colors">Cookies</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <style>
-    @keyframes fade-in-down {
-      0% {
-        opacity: 0;
-        transform: translateY(-16px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fade-in-up {
-      0% {
-        opacity: 0;
-        transform: translateY(32px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  </style>
-
-  <script>
-    lucide.createIcons();
-  </script>
-
-
-</body></html>
+        document.documentElement.style.scrollBehavior = 'smooth';
+      });
+    </script>
+  </body>
+</html>
